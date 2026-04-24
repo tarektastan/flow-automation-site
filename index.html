@@ -655,6 +655,77 @@ section { background: transparent; }
 .footer a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.15s; }
 .footer a:hover { color: var(--cream); }
 
+/* ── Mobile ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container { padding: 0 var(--sp-4); }
+
+  /* Nav: nur Brand anzeigen */
+  .nav-links { display: none !important; }
+  .nav-inner .btn { display: none !important; }
+
+  /* Sections */
+  #demo, #pricing, #faq { padding: 64px 0 !important; }
+  .section-features { padding: 48px 0 !important; }
+  .section-final-cta { padding: 80px 0 !important; }
+
+  /* Section header */
+  .section-header { margin-bottom: var(--sp-7); }
+  .section-header p { font-size: 15px; }
+
+  /* Hero */
+  .hero { padding-top: 72px; padding-bottom: var(--sp-9); }
+  .hero-trust-row {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    justify-content: center;
+  }
+
+  /* Demo: tabs horizontal über dem Transkript */
+  .demo-shell { padding: var(--sp-5); }
+  .demo-inner-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+  #demoTabs {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  #demoTabs > button {
+    width: auto !important;
+    flex: 1 1 auto;
+    min-width: 80px;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Features 3-col → 1-col */
+  .features-grid-3col { grid-template-columns: 1fr !important; }
+
+  /* Footer */
+  .footer { padding: var(--sp-7) 0 var(--sp-5); }
+  .footer-bottom-row { flex-direction: column !important; gap: var(--sp-2); }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: clamp(34px, 10vw, 44px); }
+
+  /* Phone CTA: vertikal stapeln */
+  .phone-cta {
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    align-items: stretch;
+    gap: 0;
+  }
+  .phone-cta-prefix {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: var(--sp-3) var(--sp-4);
+  }
+  .phone-cta-input { padding: var(--sp-3) var(--sp-4); }
+  .phone-cta-submit { justify-content: center; margin-top: 4px; }
+
+  /* FAQ */
+  .faq-item summary { font-size: 15px; }
+}
+
 </style>
 </head>
 <body>
@@ -702,7 +773,7 @@ section { background: transparent; }
       </button>
     </form>
     <div class="call-feedback" style="display:none; margin-top:12px; font-family:var(--font-mono); font-size:13px;"></div>
-    <div style="display:flex; gap:32px; margin-top:16px; color:var(--cream); font-size:13px; font-family:var(--font-mono);">
+    <div class="hero-trust-row" style="display:flex; gap:32px; margin-top:16px; color:var(--cream); font-size:13px; font-family:var(--font-mono);">
       <span>● Kein Setup</span>
       <span>● Kostenlos testen</span>
       <span>● In 2 Min. live</span>
@@ -720,7 +791,7 @@ section { background: transparent; }
     </div>
 
     <div class="demo-shell" data-anim="left" data-anim-delay="200">
-      <div style="display:grid; grid-template-columns: 280px 1fr; gap:48px; align-items:start;">
+      <div class="demo-inner-grid" style="display:grid; grid-template-columns: 280px 1fr; gap:48px; align-items:start;">
         <div id="demoTabs" style="display:flex; flex-direction:column; gap:12px;">
           <!-- Tabs injected by JS -->
         </div>
@@ -759,9 +830,9 @@ section { background: transparent; }
 </section>
 
 <!-- ═══ Features row (kurz, 3 USPs) ═══ -->
-<section style="padding: 80px 0;">
+<section class="section-features" style="padding: 80px 0;">
   <div class="container">
-    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;">
+    <div class="features-grid-3col" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;">
       <div class="card" style="padding:40px 32px;" data-anim="down" data-anim-delay="0">
         <div style="width:44px; height:44px; border-radius:12px; background: var(--mint-soft); display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.85 0.14 165)" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -896,7 +967,7 @@ section { background: transparent; }
 </section>
 
 <!-- ═══ Final CTA ═══ -->
-<section style="padding: 128px 0; text-align:center; position:relative; overflow:hidden;">
+<section class="section-final-cta" style="padding: 128px 0; text-align:center; position:relative; overflow:hidden;">
   <div class="dot-grid-bg"></div>
   <div class="container" style="position:relative; max-width: 720px;">
     <h2 style="margin-bottom: 24px;" data-anim="fade">Lassen Sie sich anrufen.</h2>
@@ -950,7 +1021,7 @@ section { background: transparent; }
       </div>
     </div>
     <div class="divider" style="margin: 48px 0 24px;"></div>
-    <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--subtle); font-family:var(--font-mono);">
+    <div class="footer-bottom-row" style="display:flex; justify-content:space-between; font-size:12px; color:var(--subtle); font-family:var(--font-mono);">
       <span>© 2026 Flow Automation GmbH</span>
       <span>Made in Berlin · Servers in Frankfurt</span>
     </div>
