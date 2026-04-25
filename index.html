@@ -26,8 +26,8 @@
   --muted:      oklch(0.62 0.01 85);
   --subtle:     oklch(0.45 0.008 85);
 
-  --mint:       oklch(0.85 0.14 165);    /* primary accent */
-  --mint-soft:  oklch(0.85 0.14 165 / 0.15);
+  --mint:       #C8A82A;                 /* primary accent — gold */
+  --mint-soft:  rgba(200, 168, 42, 0.15);
   --cyan:       oklch(0.82 0.12 220);
   --purple:     oklch(0.72 0.16 310);
   --pink:       oklch(0.78 0.17 350);
@@ -55,7 +55,7 @@
   --radius-xl: 24px;
   --radius-pill: 999px;
 
-  --shadow-glow: 0 0 40px rgba(120, 220, 190, 0.15);
+  --shadow-glow: 0 0 40px rgba(200, 168, 42, 0.15);
   --shadow-lift: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
@@ -236,7 +236,7 @@ section {
   color: #0a0a0c;
 }
 .btn-mint:hover {
-  background: oklch(0.9 0.14 165);
+  background: #D4B432;
   box-shadow: 0 0 30px var(--mint-soft);
   transform: translateY(-1px);
 }
@@ -525,7 +525,7 @@ section { background: transparent; }
 
 .price-card.is-featured {
   border-color: var(--mint);
-  background: linear-gradient(180deg, rgba(130,220,190,0.06), transparent 60%), var(--bg-elev-1);
+  background: linear-gradient(180deg, rgba(200,168,42,0.06), transparent 60%), var(--bg-elev-1);
 }
 .price-card.is-featured::before {
   content: "Empfohlen";
@@ -819,7 +819,7 @@ section { background: transparent; }
           </div>
 
           <!-- Summary card -->
-          <div style="margin-top: 28px; padding: 20px 22px; background: rgba(130,220,190,0.04); border:1px solid var(--mint-soft); border-radius: 12px;">
+          <div style="margin-top: 28px; padding: 20px 22px; background: rgba(200,168,42,0.04); border:1px solid var(--mint-soft); border-radius: 12px;">
             <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; color:rgba(255,255,255,0.9); text-transform:uppercase; margin-bottom: 10px;">Zusammenfassung · automatisch erstellt</div>
             <div id="demoSummary" style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.6;"></div>
           </div>
@@ -835,21 +835,21 @@ section { background: transparent; }
     <div class="features-grid-3col" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;">
       <div class="card" style="padding:40px 32px;" data-anim="down" data-anim-delay="0">
         <div style="width:44px; height:44px; border-radius:12px; background: var(--mint-soft); display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.85 0.14 165)" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8A82A" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
         </div>
         <h3 style="margin-bottom:10px;">Spart Zeit</h3>
         <p style="font-size:14px;">Jeder Anruf wird angenommen, qualifiziert und weitergeleitet — ohne dass Sie oder Ihr Team ans Telefon müssen.</p>
       </div>
       <div class="card" style="padding:40px 32px;" data-anim="up" data-anim-delay="150">
         <div style="width:44px; height:44px; border-radius:12px; background: var(--mint-soft); display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.85 0.14 165)" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8A82A" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
         </div>
         <h3 style="margin-bottom:10px;">Schließt Termine</h3>
         <p style="font-size:14px;">Die KI sieht Ihren Kalender, schlägt freie Slots vor und bucht direkt — mit Bestätigung per SMS und E-Mail.</p>
       </div>
       <div class="card" style="padding:40px 32px;" data-anim="down" data-anim-delay="300">
         <div style="width:44px; height:44px; border-radius:12px; background: var(--mint-soft); display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="oklch(0.85 0.14 165)" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8A82A" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
         </div>
         <h3 style="margin-bottom:10px;">Liefert Überblick</h3>
         <p style="font-size:14px;">Jedes Gespräch wird transkribiert, zusammengefasst und in Ihr CRM synchronisiert. Sie sehen alles auf einen Blick.</p>
@@ -1043,10 +1043,10 @@ section { background: transparent; }
   const CREAM = "oklch(0.94 0.02 85)";
   const DIM   = "oklch(0.55 0.01 85)";
   const ACCENTS = [
-    "oklch(0.85 0.14 165)",
+    "#C8A82A",
+    "#D4B432",
     "oklch(0.82 0.12 220)",
     "oklch(0.72 0.16 310)",
-    "oklch(0.78 0.17 350)",
     "oklch(0.88 0.15 95)",
   ];
 
@@ -1364,12 +1364,12 @@ section { background: transparent; }
         'font-family:var(--font-sans); font-size:14px; font-weight:500;',
         'cursor:pointer; text-align:left; width:100%; transition:all 0.15s;',
         isActive
-          ? 'background:rgba(130,220,190,0.08); border:1px solid oklch(0.85 0.14 165 / 0.3); color:oklch(0.85 0.14 165);'
+          ? 'background:rgba(200,168,42,0.08); border:1px solid rgba(200,168,42,0.3); color:#C8A82A;'
           : 'background:transparent; border:1px solid transparent; color:var(--muted);',
       ].join('');
       var dot = document.createElement('span');
       dot.style.cssText = 'width:8px;height:8px;border-radius:50%;flex-shrink:0;background:' +
-        (isActive ? 'oklch(0.85 0.14 165)' : 'rgba(255,255,255,0.15)') + ';';
+        (isActive ? '#C8A82A' : 'rgba(255,255,255,0.15)') + ';';
       btn.prepend(dot);
       btn.addEventListener('click', function () { render(i); });
       tabs.appendChild(btn);
