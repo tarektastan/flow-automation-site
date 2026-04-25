@@ -32,6 +32,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         assistantId: process.env.VAPI_ASSISTANT_ID,
         phoneNumberId: process.env.VAPI_PHONE_NUMBER_ID,
+        maxDurationSeconds: 180,
         customer: {
           number: normalized,
         },
